@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 
-for a in range(0, 8):
-
-        for b in range(a + 1, 10):
-
-                    print("{:d}{:d}".format(a, b), end=", ")
-
-                    print("{:d}{:d}".format(a + 1, b))
+for digit1 in range(0, 10):
+    for digit2 in range(digit1 + 1, 10):
+        if digit1 == 8 and digit2 == 9:
+            print("{}{}".format(digit1, digit2))
+        else:
+            print("{}{}".format(digit1, digit2), end=", ")
