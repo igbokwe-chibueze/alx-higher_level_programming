@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 
-import my_print
+__import__("py_print")
