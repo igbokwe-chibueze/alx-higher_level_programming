@@ -12,5 +12,5 @@ if __name__ == "__main__":
         my_list = []
     for i, arg in enumerate(sys.argv):
         if i > 0:
-             my_list.append(arg)
-    save_to_json_file(my_list, file_name)1~
+            my_list.append(arg)
+    save_to_json_file(my_list, file_name)
