@@ -1,25 +1,37 @@
 #!/usr/bin/python3
 """
-This module creates a class
-student with defined attributes
+This module creates a student class
+with public attributes and replaces
+attributes of student instances using
+Json
 """
 
 
 class Student:
     """
-    This class is defining the attributes for
-    the said class
+    student class with public instances
     """
     def __init__(self, first_name, last_name, age):
         """
-        This is the instantiation of the attributes
+        instantiation of attr
         """
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
-    def to_json(self):
+    def to_json(self, attrs=None):
         """
-        returns dictionary rep of all instances
+        function returns dict repres
+        of instance
         """
-        return (self.__dict__)
+        if attrs is None:
+            return (self.__dict__)
+        return ({key: value for key, value in self.__dict__.items()
+                 if key in attrs})
+
+    def reload_from_json(self, json):
+        """
+        function that replaces all attrb of the
+        student instance
+        """
+        self.__dict__.update(json)
