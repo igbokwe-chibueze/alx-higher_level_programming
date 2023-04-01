@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-import requests
-from sys import argv
 """
 script to send requests to url and display body of response
 """
+import requests
+import sys
 
+if __name__ == '__main__':
+    url = sys.argv[1]
+    response = requests.get(url)
 
-if __name__ == "__main__":
-    reply = requests.get(argv[1])
-    code = reply.status_code
-    if code > 400:
-        print("Error code: {}".format(code))
+    if response.status_code < 400:
+        print(response.text)
     else:
-        print(reply.text)
+        print('Error code:', response.status_code)

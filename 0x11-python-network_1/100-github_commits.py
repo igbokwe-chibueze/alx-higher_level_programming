@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-from sys import argv
-import requests
 """
 script takes 2 args and gets 10 commits
 """
-
+from sys import argv
+import requests
 
 if __name__ == "__main__":
     """

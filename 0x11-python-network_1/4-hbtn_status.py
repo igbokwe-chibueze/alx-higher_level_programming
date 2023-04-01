@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-import requests
 """
 script that fetches url only with requests
 """
+import requests
 
 
 if __name__ == "__main__":

@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-import requests
-from sys import argv
 """
 script takes githut creds and uses to display id
 """
-
+import requests
+from sys import argv
 
 if __name__ == "__main__":
     uid = requests.get('https://api.github.com/user',

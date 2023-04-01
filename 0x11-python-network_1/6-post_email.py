@@ -1,12 +1,16 @@
 #!/usr/bin/python3
-import requests
-from sys import argv
 """
 script to send post request to passed url with email and display
 body as response
 """
+import requests
+import sys
 
+if __name__ == '__main__':
+    url = sys.argv[1]
+    email = sys.argv[2]
+    data = {'email': email}
 
-if __name__ == "__main__":
-    reply = requests.post(argv[1], {'email': argv[2]})
-    print(reply.text)
+    response = requests.post(url, data=data)
+
+    print(response.text)
