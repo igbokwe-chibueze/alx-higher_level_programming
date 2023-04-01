@@ -88,4 +88,4 @@
   - The second argument will be your password
   - You must use the package requests and sys
   - You are not allowed to import packages other than requests and sys
-  - You don’t need to check arguments passed to the script (number or type)
+  - You don’t need to check arguments passed to the script (number or type)...
